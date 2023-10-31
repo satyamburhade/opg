@@ -1,0 +1,11 @@
+apiVersion: operators.coreos.com/v1
+kind: OperatorGroup
+metadata:
+  annotations:
+    argocd.argoproj.io/tracking-id: >-
+      gitops-bootstrap:operators.coreos.com/OperatorGroup:openshift-operators/global-operators
+  labels:
+    app.kubernetes.io/instance: gitops-bootstrap
+  name: global-operators
+  namespace: openshift-operators
+spec: {}
