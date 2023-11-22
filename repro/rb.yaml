@@ -3,10 +3,6 @@ kind: RoleBinding
 metadata:
   name: example
   namespace: openshift-gitops
-subjects:
-  - kind: ServiceAccount
-    name: cluster-samples-operator
-    namespace: openshift-cluster-samples-operator
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
