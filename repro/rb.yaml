@@ -2,4 +2,5 @@ apiVersion: authorization.openshift.io/v1
 kind: RoleBinding
 metadata:
   name: example
+  namespace: openshift-gitops
 spec: {}
