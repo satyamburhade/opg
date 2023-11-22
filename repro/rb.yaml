@@ -1,9 +1,0 @@
-apiVersion: authorization.openshift.io/v1
-kind: RoleBinding
-metadata:
-  name: example
-  namespace: openshift-gitops
-roleRef:
-  apiGroup: rbac.authorization.k8s.io
-  kind: Role
-  name: openshift-gitops-applicationset-controller
