@@ -5,10 +5,5 @@ metadata:
   namespace: openshift-gitops
 roleRef:
   apiGroup: rbac.authorization.k8s.io
-  kind: Role
-  name: openshift-gitops-applicationset-controller
-subjects:
-- kind: ServiceAccount
-  name: openshift-gitops-applicationset-controller
-  namespace: openshift-gitops
-
+  kind: ClusterRole
+  name: edit
