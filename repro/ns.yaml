@@ -2,4 +2,6 @@ kind: Namespace
 apiVersion: v1
 metadata:
   name: ocp
-spec: {}
+spec: 
+  finalizers:
+    - kubernetes
