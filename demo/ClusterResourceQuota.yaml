@@ -1,0 +1,22 @@
+apiVersion: quota.openshift.io/v1
+kind: ClusterResourceQuota
+metadata:
+  annotations:
+    #argocd.argoproj.io/sync-options: PruneLast=true
+    #argocd.argoproj.io/sync-wave: '1'
+  name: poseidon1
+spec:
+  quota:
+    hard:
+      limits.cpu: 2
+      limits.memory: 4Gi
+      ocs-storagecluster-ceph-rgw.storageclass.storage.k8s.io/persistentvolumeclaims: '0'
+      openshift-storage.noobaa.io.storageclass.storage.k8s.io/persistentvolumeclaims: '0'
+      thin-csi-02.storageclass.storage.k8s.io/persistentvolumeclaims: '0'
+      thin-csi-odf-01.storageclass.storage.k8s.io/persistentvolumeclaims: '0'
+      thin-csi.storageclass.storage.k8s.io/persistentvolumeclaims: '0'
+      thin.storageclass.storage.k8s.io/persistentvolumeclaims: '0'
+  selector:
+    labels:
+      matchLabels:
+        soprasteria/tenant: poseidon1
