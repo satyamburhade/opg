@@ -1,6 +1,8 @@
 apiVersion: quota.openshift.io/v1
 kind: ClusterResourceQuota
 metadata:
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io/background
   annotations:
     #argocd.argoproj.io/sync-options: PruneLast=true
     #argocd.argoproj.io/sync-wave: '1'
