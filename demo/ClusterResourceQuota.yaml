@@ -2,7 +2,7 @@ apiVersion: quota.openshift.io/v1
 kind: ClusterResourceQuota
 metadata:
   annotations:
-    argocd.argoproj.io/sync-options: Prune=true
+    #argocd.argoproj.io/sync-options: Prune=true
     #argocd.argoproj.io/sync-options: PruneLast=true
     #argocd.argoproj.io/sync-wave: '1'
   name: poseidon1
