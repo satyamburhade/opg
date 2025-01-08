@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: openshift-gitops
+  name: example
+spec:
+  selector:
+    matchLabels:
+      app: name
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: name
+    spec:
+      containers:
+        - name: container
+          image: >-
+            image-registry.openshift-image-registry.svc:5000/openshift-gitops/httpdd:2.4-ubi9
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
