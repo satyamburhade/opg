@@ -15,6 +15,7 @@ spec:
     spec:
       containers:
         - name: container
+          imagePullPolicy: Always
           image: >-
             image-registry.openshift-image-registry.svc:5000/openshift-gitops/httpdd:2.4-ubi9
           ports:
