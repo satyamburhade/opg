@@ -1,0 +1,9 @@
+apiVersion: project.openshift.io/v1
+kind: ProjectRequest
+metadata:
+  name: my-new2 # The desired name for the project
+  labels:
+    owner: my-team
+spec:
+  description: "This project is for my team's new application"
+  displayName: "My Team's App Project"
